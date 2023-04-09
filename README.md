@@ -47,4 +47,4 @@ uvicorn main:app --reload
 ```
 
 
-This will start the FastAPI server at `http://localhost:8000`. You can send HTTP POST requests to `http://localhost:8000/api/segbot-segment-service` with JSON input data to get segmented output.
+This will start the FastAPI server at `http://localhost:8001`. You can send HTTP POST requests to `http://localhost:8001/api/segbot-segment-service` with JSON input data to get segmented output.
