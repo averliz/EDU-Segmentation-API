@@ -37,6 +37,6 @@ def segment_text(input_query: InputQuery = Body(...)):
     return {"text": input_query.query, "segs": segment_result}
 
 
-# uvicorn main:app --host localhost --port 5001
+# uvicorn main:app --host localhost --port 8001
 if __name__ == "__main__":
-    uvicorn.run(app, host="localhost", port=5001)
+    uvicorn.run(app, host="localhost", port=8001)
