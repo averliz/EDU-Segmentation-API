@@ -20,8 +20,7 @@ app.add_middleware(
 class InputQuery(BaseModel):
     query: str
 
-
-class SegsOut(BaseModel):
+class SegmentResult(BaseModel):
     text: str
     segs: list
 
@@ -31,7 +30,7 @@ def home():
     return {"health_check": "ok"}
 
 
-@app.post("/api/segbot-segment-service", response_model=SegsOut)
+@app.post("/api/segbot-segment-service", response_model=SegmentResult)
 def segment_text(input_query: InputQuery = Body(...)):
     segment_result = run_segbot.main_input_output(input_query.query)
     return {"text": input_query.query, "segs": segment_result}
